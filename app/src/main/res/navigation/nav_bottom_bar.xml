@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/EventFragment">
+
+    <fragment
+        android:id="@+id/EventFragment"
+        android:name="com.esprit.eventmanagement.EventFragment"
+        android:label="Event Fragment" />
+
+    <fragment
+        android:id="@+id/BlogFragment"
+        android:name="com.esprit.eventmanagement.BlogFragment"
+        android:label="Blog Fragment" />
+
+    <fragment
+        android:id="@+id/ReservationFragment"
+        android:name="com.esprit.eventmanagement.ReservationFragment"
+        android:label="Reservation Fragment" />
+
+</navigation>
