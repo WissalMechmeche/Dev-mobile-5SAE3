@@ -48,7 +48,6 @@
         app:startIconDrawable="@drawable/ic_email"
         app:errorEnabled="true"
         app:boxStrokeColor="@color/pink"
-        app:suffixText="@string/input_suffix_Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiFullNameLayout">

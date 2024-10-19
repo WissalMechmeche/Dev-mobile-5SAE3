@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/item_notification"
-        android:icon="@drawable/ic_notifications"
-        app:showAsAction="ifRoom"
-        android:title="@string/item_notification" />
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_event"
+    android:title="Profile" />
 
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_reservation"
+    android:title="Logout" />
 </menu>
