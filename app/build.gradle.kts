@@ -16,6 +16,13 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    packaging {
+        // Ignore duplicate files
+        resources {
+            excludes.add("META-INF/DEPENDENCIES")
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -35,7 +42,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -45,8 +51,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
-    //implementation ("com.twilio:twilio:8.16.0")
 
+    implementation("com.twilio.sdk:twilio:8.16.0")
+    //implementation ("org.apache.httpcomponents:httpclient:4.5.14")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 }
