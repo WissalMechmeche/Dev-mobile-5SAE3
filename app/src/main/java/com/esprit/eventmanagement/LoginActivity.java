@@ -19,12 +19,23 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sessionManager = new SessionManager(this); // Initialize SessionManager
+
+        // Check if user is already logged in
+        if (sessionManager.isLoggedIn()) {
+            // Redirect to HomeActivity if the user is already logged in
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+            return; // Stop further execution of onCreate
+        }
+
+        // If the user is not logged in, display the login layout
         setContentView(R.layout.activity_login);
 
         etEmail = findViewById(R.id.tiEmail);
         etPassword = findViewById(R.id.tiPassword);
-
-        sessionManager = new SessionManager(this); // Initialize SessionManager
 
         Button btnLogin = findViewById(R.id.btnLogin);
         Button btnSignUp = findViewById(R.id.btnCreateAccount);
@@ -47,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                     // Redirect to HomeActivity
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);
-                    finish();
+                    finish(); // Prevent returning to the login screen
                 } else {
                     Toast.makeText(LoginActivity.this, "Incorrect email or password", Toast.LENGTH_SHORT).show();
                 }

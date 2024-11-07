@@ -31,11 +31,16 @@ public class TwilioSMSService {
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
-            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+            if (!response.isSuccessful()) {
+                // Afficher le corps de la réponse pour diagnostiquer l'erreur
+                System.out.println("Erreur: " + response.body().string());
+                throw new IOException("Unexpected code " + response);
+            }
             System.out.println("Message sent successfully: " + response.body().string());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
 }

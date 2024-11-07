@@ -4,15 +4,16 @@
         android:icon="@drawable/ic_event"
         android:title="Events" />
 
-    <item
-        android:id="@+id/nav_reservations"
-        android:icon="@drawable/ic_reservation"
-        android:title="Reservations" />
 
     <item
         android:id="@+id/nav_blog"
         android:icon="@drawable/ic_blog"
         android:title="Blog" />
+
+    <item
+        android:id="@+id/nav_reservations"
+        android:icon="@drawable/ic_shopping_cart_checkout"
+        android:title="Reservations" />
 </menu>
 
 

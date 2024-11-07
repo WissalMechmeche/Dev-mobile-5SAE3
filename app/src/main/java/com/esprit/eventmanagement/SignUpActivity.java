@@ -63,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
             if (validateInputs(fullName, email, password, confirmPassword)) {
                 // Ajouter l'utilisateur dans la base de données
                 executorService.execute(() -> {
-                    User newUser = new User(email, password);
+                    User newUser = new User(fullName,email, password);
                     database.UserDAO().addUSer(newUser);
                     Log.d("SignUpActivity", "User added to the database: " + newUser.toString());
 

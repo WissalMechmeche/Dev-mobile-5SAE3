@@ -71,9 +71,8 @@ public class HomeActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            // Ouvrir l'activité de profil
-            //Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(this, EditProfileActivity.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.nav_logout) {
             // Appeler la méthode logout pour déconnecter l'utilisateur

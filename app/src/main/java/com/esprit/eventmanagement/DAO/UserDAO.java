@@ -30,5 +30,17 @@ public interface UserDAO {
     @Query("SELECT email FROM User")
     List<String> getAllEmails();
 
+    @Query("SELECT * FROM user WHERE phoneNumber = :phoneNumber")
+    User getUserByPhoneNumber(String phoneNumber);
+
+    @Query("UPDATE user SET password = :newPassword WHERE phoneNumber = :phoneNumber")
+    int updatePasswordByPhoneNumber(String phoneNumber, String newPassword);
+
+
+
+
+
+
+
 
 }

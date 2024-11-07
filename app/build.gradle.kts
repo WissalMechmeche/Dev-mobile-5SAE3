@@ -56,6 +56,7 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.6.1")
 
     implementation("com.twilio.sdk:twilio:8.16.0")
-    //implementation ("org.apache.httpcomponents:httpclient:4.5.14")
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+
+
 }

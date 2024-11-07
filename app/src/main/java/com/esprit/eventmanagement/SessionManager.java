@@ -23,6 +23,7 @@ public class SessionManager extends AppCompatActivity {
         editor = sharedPreferences.edit();
     }
 
+
     // Sauvegarder les informations de l'utilisateur
     public void saveUserSession(int userId, String email) {
         editor.putInt(KEY_USER_ID, userId);
