@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <!-- Event Image -->
     <ImageView
         android:id="@+id/event_image"
         android:layout_width="100dp"
@@ -16,7 +15,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Event Title -->
     <TextView
         android:id="@+id/event_title"
         android:layout_width="0dp"
@@ -29,7 +27,6 @@
         app:layout_constraintStart_toEndOf="@id/event_image"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Event Description -->
     <TextView
         android:id="@+id/event_description"
         android:layout_width="0dp"
@@ -41,7 +38,6 @@
         app:layout_constraintStart_toEndOf="@id/event_image"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Event Start Date -->
     <TextView
         android:id="@+id/event_start_date"
         android:layout_width="0dp"
@@ -53,7 +49,6 @@
         app:layout_constraintStart_toEndOf="@id/event_image"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Buttons Layout (Details, Modify, Delete) -->
     <LinearLayout
         android:id="@+id/event_buttons"
         android:layout_width="0dp"
@@ -66,7 +61,6 @@
         android:gravity="end"
         android:weightSum="3">
 
-        <!-- Details Button (Icon) -->
         <ImageButton
             android:id="@+id/btn_details"
             android:layout_width="32dp"
@@ -76,7 +70,6 @@
             android:src="@drawable/ic_details"
             android:contentDescription="Details" />
 
-        <!-- Modify Button (Icon) -->
         <ImageButton
             android:id="@+id/btn_modify"
             android:layout_width="32dp"
@@ -86,7 +79,6 @@
             android:src="@drawable/ic_edit"
             android:contentDescription="Modify" />
 
-        <!-- Delete Button (Icon) -->
         <ImageButton
             android:id="@+id/btn_delete"
             android:layout_width="32dp"
@@ -96,5 +88,27 @@
             android:src="@drawable/ic_delete"
             android:contentDescription="Delete" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/event_end_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="End Date: 02 Jan 2024"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/event_start_date"
+        app:layout_constraintStart_toEndOf="@id/event_image"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/event_ticket_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ticket Type: Free"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/event_end_date"
+        app:layout_constraintStart_toEndOf="@id/event_image"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

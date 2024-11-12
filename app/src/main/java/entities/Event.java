@@ -64,10 +64,10 @@ public class Event {
         this.endDate = endDate;
     }
     public String getImagePath() {
-        return imagePath; // Getter for image path
+        return imagePath;
     }
 
     public void setImagePath(String imagePath) {
-        this.imagePath = imagePath; // Setter for image path
+        this.imagePath = imagePath;
     }
 }

@@ -38,7 +38,6 @@ public class AddEventActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_event);
 
-        // Setting up the UI elements
         editTextTitle = findViewById(R.id.editTextText);
         editTextDescription = findViewById(R.id.editTextText2);
         editTextStartDate = findViewById(R.id.editTextDate);
@@ -46,22 +45,19 @@ public class AddEventActivity extends AppCompatActivity {
         imageButtonAdd = findViewById(R.id.imageButtonAdd);
         buttonAddEvent = findViewById(R.id.button3);
         buttonCancel = findViewById(R.id.button4);
-        btnViewAllEvents = findViewById(R.id.btnViewAllEvents); // Button to view all events
+        btnViewAllEvents = findViewById(R.id.btnViewAllEvents);
 
-        // Adjusting padding for edge-to-edge support
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Set up button click listeners
         imageButtonAdd.setOnClickListener(v -> openImagePicker());
         buttonAddEvent.setOnClickListener(v -> addEvent());
         buttonCancel.setOnClickListener(v -> showCancelDialog());
         btnViewAllEvents.setOnClickListener(v -> viewAllEvents());
 
-        // Set up date pickers for start and end dates
         setupDatePicker(editTextStartDate);
         setupDatePicker(editTextEndDate);
     }
@@ -129,8 +125,8 @@ public class AddEventActivity extends AppCompatActivity {
     private void viewAllEvents() {
         AllEventsFragment allEventsFragment = new AllEventsFragment();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, allEventsFragment) // Replace 'fragment_container' with the ID of the container where you want to display the fragment
-                .addToBackStack(null) // Optional, if you want to add this transaction to the back stack
+                .replace(R.id.fragment_container, allEventsFragment)
+                .addToBackStack(null)
                 .commit();
     }
 

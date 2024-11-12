@@ -24,32 +24,36 @@ public class AllEventsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_all_events, container, false);
 
-        // Initialize RecyclerView
         recyclerViewEvents = view.findViewById(R.id.recyclerViewEvents);
         recyclerViewEvents.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Fetch data from the database in a background thread
         fetchDataFromDatabase();
 
         return view;
     }
 
     private void fetchDataFromDatabase() {
+        // Run the database query in the background thread
         executorService.execute(() -> {
-            // Fetch events from database
-            AppDataBase db = AppDataBase.getAppDataBase(getContext());
-            eventList = db.eventDAO().getAllEvents();
-            Log.d("AllEventsFragment", "Fetched events: " + eventList.size());
-
-            // Update the RecyclerView on the main thread
-            getActivity().runOnUiThread(() -> {
+            AppDataBase db = AppDataBase.getAppDataBase(getActivity().getApplicationContext());
+            if (db != null) {
+                // Fetch the event list in the background
+                List<Event> eventList = db.eventDAO().getAllEvents();
                 if (eventList != null && !eventList.isEmpty()) {
-                    eventAdapter = new EventAdapter(eventList);
-                    recyclerViewEvents.setAdapter(eventAdapter);
+                    // Update the RecyclerView on the UI thread
+                    getActivity().runOnUiThread(() -> {
+                        eventAdapter = new EventAdapter(eventList);
+                        recyclerViewEvents.setAdapter(eventAdapter);
+                    });
                 } else {
-                    Log.d("AllEventsFragment", "No events found.");
+                    Log.d("AllEventsFragment", "No events found or eventList is null.");
                 }
-            });
+            } else {
+                Log.d("AllEventsFragment", "Database instance is null.");
+            }
         });
     }
+
+
+
 }

@@ -14,16 +14,15 @@ import entities.Event;
 public interface EventDAO {
     @Insert
     void addEvent(Event event);
+    @Query("SELECT * FROM event")
+    List<Event> getAllEvents();
 
+    @Query("SELECT * FROM event WHERE id = :id")
+    Event getEventById(int id);
     @Update
     void updateEvent(Event event);
 
     @Delete
     void deleteEvent(Event event);
 
-    @Query("SELECT * FROM event")
-    List<Event> getAllEvents();
-
-    @Query("SELECT * FROM event WHERE id = :id")
-    Event getEventById(int id);
 }
