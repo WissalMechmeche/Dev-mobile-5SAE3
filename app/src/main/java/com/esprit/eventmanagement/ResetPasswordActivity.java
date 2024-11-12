@@ -31,7 +31,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         tiPassword = findViewById(R.id.tiPassword);
         tiConfirmPassword = findViewById(R.id.tiConfirmPassword);
-        btnSubmit = findViewById(R.id.btnSendEmail);
+        btnSubmit = findViewById(R.id.btnSubmit);
 
         // Initialiser la base de données
         database = AppDataBase.getAppDataBase(this);

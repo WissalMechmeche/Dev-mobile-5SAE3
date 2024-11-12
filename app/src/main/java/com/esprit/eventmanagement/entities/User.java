@@ -26,16 +26,6 @@ public class User {
     }
 
 
-    public User() {
-    }
-
-    public User(String fullName, String email, String password, String phoneNumber) {
-        this.fullName = fullName;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-    }
-
     public int getId() {
         return id;
     }

@@ -11,10 +11,12 @@ import com.google.android.material.textfield.TextInputEditText;
 import android.text.TextUtils;
 import android.util.Patterns;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     private TextInputEditText etEmail, etPassword;
     private SessionManager sessionManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

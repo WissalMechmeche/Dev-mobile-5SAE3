@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -59,4 +60,21 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+

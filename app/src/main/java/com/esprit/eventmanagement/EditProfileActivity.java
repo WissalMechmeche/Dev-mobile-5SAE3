@@ -1,5 +1,6 @@
 package com.esprit.eventmanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -85,6 +86,11 @@ public class EditProfileActivity extends AppCompatActivity {
                 // Update the user in the database
                 db.UserDAO().updateUSer(currentUser);
                 Toast.makeText(EditProfileActivity.this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
+            // Redirection vers l'activité d'accueil (HomeActivity)
+                Intent intent = new Intent(EditProfileActivity.this, HomeActivity.class); // Remplacez HomeActivity par l'activité de votre choix
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Facultatif : Pour éviter l'empilage des activités
+                startActivity(intent);
+                finish(); // Termine cette activité si nécessaire
             }
         });
     }

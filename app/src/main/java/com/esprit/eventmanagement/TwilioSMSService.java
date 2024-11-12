@@ -15,7 +15,8 @@ public class TwilioSMSService {
 
     private OkHttpClient client = new OkHttpClient();
 
-    public void sendSms(String toPhoneNumber, String messageBody) {
+    public void sendSms(String toPhoneNumber, String userName , String verificationCode ) {
+        String messageBody = "Bonjour " + userName + ", votre code de vérification est : " + verificationCode;
         String url = "https://api.twilio.com/2010-04-01/Accounts/" + ACCOUNT_SID + "/Messages.json";
 
         FormBody formBody = new FormBody.Builder()

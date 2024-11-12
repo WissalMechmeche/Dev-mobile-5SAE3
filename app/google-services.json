@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611523258177",
+    "project_id": "gestionevents-8760e",
+    "storage_bucket": "gestionevents-8760e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611523258177:android:a793694ebc75e174c5a3c0",
+        "android_client_info": {
+          "package_name": "com.esprit.eventmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611523258177-mqolfc63qe6sam9vqs533b83jkf7t9g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD997X-0aq0jKaMnevaBF7eSQwkGlHletQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611523258177-mqolfc63qe6sam9vqs533b83jkf7t9g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
