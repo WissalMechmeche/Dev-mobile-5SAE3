@@ -114,6 +114,7 @@ public class EditProfileActivity extends AppCompatActivity {
         } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             etEmail.setError("Please enter a valid email");
             isValid = false;
+
         } else {
             etEmail.setError(null);
         }
@@ -125,7 +126,7 @@ public class EditProfileActivity extends AppCompatActivity {
         } else if (!android.util.Patterns.PHONE.matcher(phoneNumber).matches()) {
             etPhoneNumber.setError("Please enter a valid phone number");
             isValid = false;
-        } else {
+        } else{
             etPhoneNumber.setError(null);
         }
 
@@ -147,4 +148,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
         return isValid;
     }
+
+
 }

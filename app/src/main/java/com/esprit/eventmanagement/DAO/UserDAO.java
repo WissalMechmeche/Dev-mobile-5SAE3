@@ -37,10 +37,4 @@ public interface UserDAO {
     int updatePasswordByPhoneNumber(String phoneNumber, String newPassword);
 
 
-
-
-
-
-
-
 }
