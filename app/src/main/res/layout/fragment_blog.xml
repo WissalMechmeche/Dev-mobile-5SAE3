@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top bar with search and add button -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Search input on the left -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchBlogView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:queryHint="Search Blog"
+            android:iconifiedByDefault="true"
+            android:background="@drawable/rounded_search_background"
+            android:padding="8dp"
+            android:focusable="true"
+            android:clickable="true"/>
+
+        <!-- Add Blog button on the right -->
+        <Button
+            android:id="@+id/addBlogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Add Blog" />
+    </LinearLayout>
+
+    <!-- RecyclerView for displaying blogs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/blogRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
