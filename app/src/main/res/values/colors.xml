@@ -12,9 +12,12 @@
     <color name="green">#074207</color>
     <color name="red">#F44336</color>
     <color name="bottom_navigation_icon">#000000</color> <!-- You can change the color as needed -->
-    <color name="colorPrimary">#FF66B2</color> <!-- Light pink -->
-    <color name="colorPrimaryDark">#FF3385</color> <!-- Darker pink for the status bar -->
-    <color name="colorAccent">#FF99CC</color> <!-- Accent color, a softer pink -->
-    <color name="gradientStart">#FF66B2</color> <!-- Starting color for the gradient -->
-    <color name="gradientEnd">#FF3385</color> <!-- Ending color for the gradient -->
+        <color name="colorPrimary">#FF66B2</color> <!-- Light pink -->
+        <color name="colorPrimaryDark">#FF3385</color> <!-- Darker pink for the status bar -->
+        <color name="colorAccent">#FF99CC</color> <!-- Softer pink for accents -->
+        <color name="backgroundPink">#FCE4EC</color> <!-- Very light pink background -->
+        <color name="buttonPink">#FF66B2</color> <!-- Button color -->
+        <color name="buttonTextColor">#FFFFFF</color> <!-- White text on buttons -->
+        <color name="buttonDeleteColor">#F50057</color> <!-- Dark pink for delete button -->
+
 </resources>

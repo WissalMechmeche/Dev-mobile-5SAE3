@@ -113,7 +113,6 @@
                 android:inputType="text"
                 android:padding="8dp" />
 
-            <!-- Green Banner Section (Discount) -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
@@ -145,7 +144,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- EditText Fields (Form) -->
 
             <EditText
                 android:id="@+id/eventName"

@@ -4,8 +4,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity">
+    tools:context=".DetailsActivity"
+    android:background="@color/backgroundPink">
 
+    <!-- Background Image -->
     <ImageView
         android:id="@+id/fond"
         android:layout_width="0dp"
@@ -17,47 +19,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Scrollable Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="35dp">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <!-- Event Image -->
             <ImageView
                 android:id="@+id/itemtpic"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="16dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="16dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/eventt" />
+                android:src="@drawable/eventt"
+                android:layout_gravity="center"/>
+
+            <!-- Title -->
             <TextView
                 android:id="@+id/ticketInfoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ticket Information"
-                android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_margin="16dp" />
+                android:layout_marginBottom="8dp" />
 
+            <!-- Ticket Details -->
             <LinearLayout
                 android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="16dp">
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:id="@+id/ticketName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ticket Name: Event XYZ"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -66,29 +75,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Description: This is a great event."
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_marginTop="4dp" />
 
                 <TextView
                     android:id="@+id/ticketPrice1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Price: 100 TND"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorAccent"
                     android:textSize="16sp"
-                    android:textStyle="italic" />
+                    android:textStyle="italic"
+                    android:layout_marginTop="4dp" />
             </LinearLayout>
 
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/addToCardBtn"
+            <!-- Delete Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/green_button_background"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"
-                android:text="Reservation" />
+                android:layout_marginTop="8dp"
+                android:text="Delete Ticket"
+                android:textColor="@color/buttonTextColor"
+                android:backgroundTint="@color/buttonDeleteColor"
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

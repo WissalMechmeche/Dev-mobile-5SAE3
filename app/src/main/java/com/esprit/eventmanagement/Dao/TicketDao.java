@@ -1,6 +1,7 @@
 package com.esprit.eventmanagement.Dao;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
@@ -19,6 +20,12 @@ public interface TicketDao {
     @Query("SELECT * FROM tickets")
     List<Ticket> getAllTickets();
 
+    @Query("SELECT * FROM tickets WHERE id = :id")
+    Ticket getTicketById(int id);
+
     @Update
     void update(Ticket ticket);
+
+    @Query("DELETE FROM tickets WHERE id = :id")
+    void deleteById(int id); // This method deletes the ticket by ID
 }
