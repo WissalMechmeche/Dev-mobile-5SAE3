@@ -6,6 +6,12 @@
     <!--  Inputs | Labels | Buttons -->
 
     <string name="default_web_client_id">123456.apps.googleusercontent.com</string>
+    <string name="event_image">Some image description</string>
+    <string-array name="ticket_types">
+        <item>VIP</item>
+        <item>Chaise</item>
+        <item>Gradin</item>
+    </string-array>
 
     <string name="input_email">Email</string>
     <string name="input_phone">Phone Number</string>
@@ -63,7 +69,6 @@
     <string name="Content_description_google_button">Google Login</string>
 
     <string name="msg_coming_soon">Coming soon :)</string>
-
 
 
     <!-- Strings used for fragments for navigation -->

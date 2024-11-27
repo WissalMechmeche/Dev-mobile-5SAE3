@@ -1,14 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EventFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/buttonAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Event"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/pink"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/buttonAddBillet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Billet"
+        android:backgroundTint="@color/pink"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Event fragment" />
-
+        android:layout_marginTop="120dp"/>
 </FrameLayout>

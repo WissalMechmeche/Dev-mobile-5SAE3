@@ -15,6 +15,24 @@
         android:theme="@style/Theme.EventManagement"
         tools:targetApi="31">
         <activity
+            android:name=".ReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_detail_reservation"
+            android:exported="false" />
+        <activity
+            android:name=".EventAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".AddEventActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResetPasswordActivity"
             android:exported="false" />
         <activity

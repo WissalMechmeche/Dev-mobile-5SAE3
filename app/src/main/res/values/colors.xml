@@ -16,6 +16,12 @@
         <color name="colorError">#FF0000</color>
 
     <color name="pink">#e0115f</color>
+    <color name="colorAccent">#FF99CC</color>
+    <color name="light_grey">#928F8F</color>
+    <color name="bottom_navigation_icon">#000000</color>
+    <color name="backgroundPink">#FCE4EC</color>
+    <color name="buttonTextColor">#FFFFFF</color> <!-- White text on buttons -->
+    <color name="buttonDeleteColor">#F50057</color>
     <color name="grey">#9f9f9f</color>
 
 
